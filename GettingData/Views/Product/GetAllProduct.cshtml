@@ -1,0 +1,21 @@
+﻿@using GettingData.Models
+@model List<Product> 
+
+<h2 style="text-align:center">Product List</h2>
+
+<ul>
+    @foreach (Product item in Model)
+    {
+        <li>Name: @item.ProductName Category: @item.CategoryName</li>
+    }
+</ul>
+
+<h2>New Product</h2>
+
+<form method="post" action="addProduct">
+    <label for="productName">Product Name</label> <br />
+    <input type="text" id="productName" name="productName"/> <br />
+    <label for="category">Category Name</label> <br />
+    <input type="text" id="category" name="categoryName"/> <br />
+    <input type="submit" value="Add Product"/>
+</form>

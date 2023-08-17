@@ -1,0 +1,23 @@
+﻿@using GettingData.Models
+@model List<User>
+
+<h2 style="text-align:center">User List</h2>
+
+<ul>
+    @foreach (User item in Model)
+    {
+        <li>UserName: @item.UserName Age: @item.Age</li>
+    }
+</ul>
+
+<h2>New User</h2>
+
+<form method="post" action="addUser">
+    <label for="userName">User Name</label> <br />
+    <input type="text" id="userName" name="userName" placeholder="Enter your UserName"/> <br />
+    <label for="password">Password</label> <br />
+    <input type="password" id="password" name="password"/> <br />
+    <label for="age">Age</label> <br />
+    <input type="number" id="age" name="age"/> <br />
+    <button>Add User</button>
+</form>
